@@ -11,7 +11,7 @@ Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per �
 */
 
 $palabras = ['Casa', 'Avion', 'Coche'];
-var_dump ($palabras);
+echo ($palabras) . "<br>";
 
 //Añadir una letra 
 $caracter = 'o';
