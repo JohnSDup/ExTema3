@@ -10,46 +10,36 @@ Per exemple:
 Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”.
 */
 
-$palabras = ['Casa', 'Avion', 'Coche'];
-echo ($palabras) . "<br>";
+$palabras = ['Casa', 'Avion', 'Garaje'];
+
 
 //Añadir una letra 
-$caracter = 'o';
+$caracter = 'a';
 
 function comprovarLetras($palabras, $caracter) {
-    foreach($palabras as $palabra) {
+    foreach($palabras as $palabra)
+        $letraPalabras = false; {
         for ($i = 0; isset($palabra[$i]); $i++) {
             if ($palabra[$i] == $caracter) {
-                return true;
+                $letraPalabras = true;
+                break;
             }
         }
+        if (!$letraPalabras) {
+            return false;
+        }
     }
-    return false;
+    return true;
+    
 }
         
 $resultado = comprovarLetras($palabras, $caracter);
 
 if ($resultado) {
-    echo "Contiene la letra $caracter";
+    echo "Todas las palabras contienen la letra $caracter";
 }else{
-    echo "No contiene la letra $caracter ";
+    echo "Algun de las palabras o ninguna de las palabras contiene la letra $caracter ";
 }
 
-
-
-
-
-/*
-//cambiar el if de la letra que se quiere buscar
-REVISAR 
-function comprovarPalabras($palabras) {
-    for ($i = 0; $i < count($palabras); $i++) {
-        if (strpos($palabras[$i], 'm') !== false) {    
-         return true;
-        }
-    }
-    return false;
-}
-*/
 
 ?>
