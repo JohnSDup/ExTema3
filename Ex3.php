@@ -10,15 +10,15 @@ Per exemple:
 Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”.
 */
 
-$palabras = ['Casa', 'Avion', 'Garaje'];
+$palabras = ['casa', 'avion', 'garaje'];
 
 
 //Añadir una letra 
 $caracter = 'a';
 
-function comprovarLetras($palabras, $caracter) {
-    foreach($palabras as $palabra)
-        $letraPalabras = false; {
+function comprobarPalabrasCoincideLetra(array $palabras,string $caracter) {
+    foreach($palabras as $palabra) {
+        $letraPalabras = false; 
         for ($i = 0; isset($palabra[$i]); $i++) {
             if ($palabra[$i] == $caracter) {
                 $letraPalabras = true;
@@ -33,12 +33,12 @@ function comprovarLetras($palabras, $caracter) {
     
 }
         
-$resultado = comprovarLetras($palabras, $caracter);
+$resultado = comprobarPalabrasCoincideLetra(palabras, $caracter);
 
 if ($resultado) {
     echo "Todas las palabras contienen la letra $caracter";
 }else{
-    echo "Algun de las palabras o ninguna de las palabras contiene la letra $caracter ";
+    echo "Alguna o ninguna de las palabras contiene la letra $caracter ";
 }
 
 
